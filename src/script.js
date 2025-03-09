@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     // Select menu button and mobile menu container
     const menuButton = document.querySelector(".lg:hidden button"); // Button to open/close mobile menu
-    const mobileMenu = document.querySelector(".lg:hidden"); // Mobile menu container
-    const closeButton = mobileMenu.querySelector("button"); // Close button inside the mobile menu
+    const mobileMenu = document.querySelector(".lg\\:hidden.fixed.inset-0.z-50"); // Mobile menu container
+    const closeButton = mobileMenu.querySelector("button[aria-label='Close menu']"); // Close button inside the mobile menu
 
     // Toggle mobile menu visibility
     menuButton.addEventListener("click", function () {
@@ -38,14 +38,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Close menu when clicking outside of it
     document.addEventListener("click", function (event) {
-        if (!mobileMenu.contains(event.target) && !menuButton.contains(event.target)) {
+      const isClickInsideMenu = mobileMenu.contains(event.target);
+      const isClickOnMenuButton = menuButton.contains(event.target);
+        if (!isClickInsideMenu && !isClickOnMenuButton) {
             mobileMenu.classList.add("hidden");
         }
     });
 
     // Handle dropdown toggle inside the mobile menu
-    const dropdownButton = document.querySelector("[aria-controls='disclosure-1']");
-    const dropdownMenu = document.querySelector("#disclosure-1");
+    const dropdownButton = mobileMenu.querySelector("[aria-controls='disclosure-1']");
+    const dropdownMenu = mobileMenu.querySelector("#disclosure-1");
 
     dropdownButton.addEventListener("click", function () {
         const isExpanded = dropdownButton.getAttribute("aria-expanded") === "true";

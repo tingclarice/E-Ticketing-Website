@@ -42,7 +42,7 @@
           </button>
 
           <div
-            class="absolute top-full -left-8 z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white ring-1 shadow-lg ring-gray-900/5">
+            class="absolute top-full -left-8 z-20 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white ring-1 shadow-lg ring-gray-900/5">
             <div class="p-4">
               <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50">
                 <div
@@ -108,7 +108,7 @@
       </div>
     </nav>
     <!-- Mobile menu, show/hide based on menu open state. -->
-    <div class="lg:hidden" role="dialog" aria-modal="true">
+    <div class="lg:hidden fixed inset-0 z-50 hidden" role="dialog" aria-modal="true">
       <!-- Background backdrop, show/hide based on slide-over state. -->
       <div class="fixed inset-0 z-10"></div>
       <div
@@ -179,7 +179,7 @@
       </div>
   </header>
 
-  <div id="default-carousel" class="z-10 relative w-full" data-carousel="slide">
+  <div id="default-carousel" class="z-10 relative w-3/4 mx-auto" data-carousel="slide">
     <!-- Carousel wrapper -->
     <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
       <!-- Item 1 -->
@@ -229,6 +229,8 @@
     </button>
   </div>
 
+  <div class="h-8"></div>
+
   <form class="max-w-lg mx-auto m-100">
     <div class="flex">
       <label for="search-dropdown" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Your
@@ -265,7 +267,7 @@
       <div class="relative w-full">
         <input type="search" id="search-dropdown"
           class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg border-s-gray-50 border-s-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-s-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
-          placeholder="Search Mockups, Logos, Design Templates..." required />
+          placeholder="Search Events..." required />
         <button type="submit"
           class="absolute top-0 end-0 p-2.5 text-sm font-medium h-full text-white bg-blue-700 rounded-e-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
           <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
@@ -278,6 +280,7 @@
     </div>
   </form>
 
+  
 
   <script src="/node_modules/flowbite/dist/flowbite.min.js"></script>
 </body>
