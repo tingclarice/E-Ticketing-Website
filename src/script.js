@@ -19,42 +19,92 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// Mobile dropdown
+// Mobile Dropdown 2
 document.addEventListener("DOMContentLoaded", function () {
-    // Select menu button and mobile menu container
-    const menuButton = document.querySelector(".lg:hidden button"); // Button to open/close mobile menu
-    const mobileMenu = document.querySelector(".lg\\:hidden.fixed.inset-0.z-50"); // Mobile menu container
-    const closeButton = mobileMenu.querySelector("button[aria-label='Close menu']"); // Close button inside the mobile menu
+  // Select menu button and mobile menu container
+  const menuButton = document.querySelector(".lg:hidden button"); // Hamburger button
+  const mobileMenu = document.querySelector(".lg\\:hidden.fixed.inset-0.z-50"); // Mobile menu
+  const closeButton = mobileMenu?.querySelector("button[aria-label='Close menu']"); // Close button inside the menu
 
-    // Toggle mobile menu visibility
-    menuButton.addEventListener("click", function () {
-        mobileMenu.classList.toggle("hidden");
-    });
+  if (!menuButton || !mobileMenu) {
+      console.error("Menu button or mobile menu not found.");
+      return;
+  }
 
-    // Close menu when clicking the close button
-    closeButton.addEventListener("click", function () {
-        mobileMenu.classList.add("hidden");
-    });
+  // Ensure the menu is hidden by default
+  mobileMenu.classList.add("hidden");
 
-    // Close menu when clicking outside of it
-    document.addEventListener("click", function (event) {
+  // Toggle menu when clicking the hamburger button
+  menuButton.addEventListener("click", function () {
+      mobileMenu.classList.toggle("hidden");
+  });
+
+  // Close menu when clicking the close button (if exists)
+  closeButton?.addEventListener("click", function () {
+      mobileMenu.classList.add("hidden");
+  });
+
+  // Close menu when clicking outside of it
+  document.addEventListener("click", function (event) {
       const isClickInsideMenu = mobileMenu.contains(event.target);
       const isClickOnMenuButton = menuButton.contains(event.target);
-        if (!isClickInsideMenu && !isClickOnMenuButton) {
-            mobileMenu.classList.add("hidden");
-        }
-    });
 
-    // Handle dropdown toggle inside the mobile menu
-    const dropdownButton = mobileMenu.querySelector("[aria-controls='disclosure-1']");
-    const dropdownMenu = mobileMenu.querySelector("#disclosure-1");
+      if (!isClickInsideMenu && !isClickOnMenuButton) {
+          mobileMenu.classList.add("hidden");
+      }
+  });
 
-    dropdownButton.addEventListener("click", function () {
-        const isExpanded = dropdownButton.getAttribute("aria-expanded") === "true";
-        dropdownButton.setAttribute("aria-expanded", !isExpanded);
-        dropdownMenu.classList.toggle("hidden");
+  // Handle dropdown toggle inside the mobile menu
+  const dropdownButton = mobileMenu?.querySelector("[aria-controls='disclosure-1']");
+  const dropdownMenu = mobileMenu?.querySelector("#disclosure-1");
 
-        // Toggle the arrow icon rotation
-        dropdownButton.querySelector("svg").classList.toggle("rotate-180");
-    });
+  dropdownButton?.addEventListener("click", function () {
+      const isExpanded = dropdownButton.getAttribute("aria-expanded") === "true";
+      dropdownButton.setAttribute("aria-expanded", !isExpanded);
+      dropdownMenu?.classList.toggle("hidden");
+
+      // Toggle the arrow icon rotation
+      dropdownButton.querySelector("svg")?.classList.toggle("rotate-180");
+  });
 });
+
+
+// Mobile dropdown
+  // document.addEventListener("DOMContentLoaded", function () {
+  //     // Select menu button and mobile menu container
+  //     const menuButton = document.querySelector(".lg:hidden button"); // Button to open/close mobile menu
+  //     const mobileMenu = document.querySelector(".lg\\:hidden.fixed.inset-0.z-50"); // Mobile menu container
+  //     const closeButton = mobileMenu.querySelector("button[aria-label='Close menu']"); // Close button inside the mobile menu
+
+  //     // Toggle mobile menu visibility
+  //     menuButton.addEventListener("click", function () {
+  //         mobileMenu.classList.toggle("hidden");
+  //     });
+
+  //     // Close menu when clicking the close button
+  //     closeButton.addEventListener("click", function () {
+  //         mobileMenu.classList.add("hidden");
+  //     });
+
+  //     // Close menu when clicking outside of it
+  //     document.addEventListener("click", function (event) {
+  //       const isClickInsideMenu = mobileMenu.contains(event.target);
+  //       const isClickOnMenuButton = menuButton.contains(event.target);
+  //         if (!isClickInsideMenu && !isClickOnMenuButton) {
+  //             mobileMenu.classList.add("hidden");
+  //         }
+  //     });
+
+  //     // Handle dropdown toggle inside the mobile menu
+  //     const dropdownButton = mobileMenu.querySelector("[aria-controls='disclosure-1']");
+  //     const dropdownMenu = mobileMenu.querySelector("#disclosure-1");
+
+  //     dropdownButton.addEventListener("click", function () {
+  //         const isExpanded = dropdownButton.getAttribute("aria-expanded") === "true";
+  //         dropdownButton.setAttribute("aria-expanded", !isExpanded);
+  //         dropdownMenu.classList.toggle("hidden");
+
+  //         // Toggle the arrow icon rotation
+  //         dropdownButton.querySelector("svg").classList.toggle("rotate-180");
+  //     });
+  // });
