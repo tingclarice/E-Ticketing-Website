@@ -22,9 +22,9 @@ document.addEventListener("DOMContentLoaded", function () {
 // Mobile Dropdown 2
 document.addEventListener("DOMContentLoaded", function () {
   // Select menu button and mobile menu container
-  const menuButton = document.querySelector(".lg:hidden button"); // Hamburger button
-  const mobileMenu = document.querySelector(".lg\\:hidden.fixed.inset-0.z-50"); // Mobile menu
-  const closeButton = mobileMenu?.querySelector("button[aria-label='Close menu']"); // Close button inside the menu
+  const menuButton = document.getElementById("hamburgerButton"); // Hamburger button
+  const mobileMenu = document.getElementById("mobileMenu"); // Mobile menu
+  const closeButton = mobileMenu?.querySelector("#mobileCloseButton"); // Close button inside the menu
 
   if (!menuButton || !mobileMenu) {
       console.error("Menu button or mobile menu not found.");
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Close menu when clicking the close button (if exists)
   closeButton?.addEventListener("click", function () {
-      mobileMenu.classList.add("hidden");
+      mobileMenu.classList.toggle("hidden");
   });
 
   // Close menu when clicking outside of it
@@ -67,7 +67,6 @@ document.addEventListener("DOMContentLoaded", function () {
       dropdownButton.querySelector("svg")?.classList.toggle("rotate-180");
   });
 });
-
 
 // Mobile dropdown
   // document.addEventListener("DOMContentLoaded", function () {
