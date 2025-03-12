@@ -451,6 +451,39 @@
       max-width: 96rem !important;
     }
   }
+  .flex-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Default: 4 columns */
+    gap: 16px; /* Set a fixed gap */
+    max-width: 1100px; /* Ensures it does not take full width */
+    margin: 0 auto; /* Centers the grid */
+    padding: 20px; /* Adds padding for spacing */
+}
+
+@media (max-width: 1000px) {
+  .flex-container {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 2 columns for screens ≤ 800px */
+@media (max-width: 800px) {
+    .flex-container {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 550px; /* Adjust to fit two cards perfectly */
+        justify-content: center; /* Ensure it is centered */
+    }
+}
+
+/* 1 column for screens ≤ 600px */
+@media (max-width: 600px) {
+    .flex-container {
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 275px; /* Adjust to fit one card perfectly */
+        justify-content: center; /* Ensure it is centered */
+    }
+}
+
   .-m-1 {
     margin: calc(var(--spacing) * -1);
   }
