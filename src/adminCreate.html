@@ -19,7 +19,8 @@
             alt="">
         </a>
       </div>
-      <div class="flex lg:hidden">
+      <!-- Hamburger -->
+      <div id="hamburgerButton" class="flex lg:hidden">
         <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
           <span class="sr-only">Open main menu</span>
           <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
@@ -28,6 +29,7 @@
           </svg>
         </button>
       </div>
+
       <div class="hidden lg:flex lg:gap-x-12">
         <div class="relative">
           <button type="button" class="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900 hover:text-indigo-600"
@@ -71,7 +73,7 @@
                   </svg>
                 </div>
                 <div class="flex-auto">
-                  <a href="#" class="block font-semibold text-gray-900">
+                  <a href="adminLogin.html" class="block font-semibold text-gray-900">
                     Create & Manage Events
                     <span class="absolute inset-0"></span>
                   </a>
@@ -84,14 +86,14 @@
         </div>
 
         <a href="index.html" class="text-sm/6 font-semibold text-gray-900 hover:text-indigo-600">Event Listing</a>
-        <a href="#" class="text-sm/6 font-semibold text-gray-900 hover:text-indigo-600">FAQ</a>
+        <a href="faq.html" class="text-sm/6 font-semibold text-gray-900 hover:text-indigo-600">FAQ</a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="#" class="text-sm/6 font-semibold text-gray-900"> </a>
+        <a href="custCreate.html" class="text-sm/6 font-semibold text-gray-900">Sign Up <span aria-hidden="true">&rarr;</span></a>
       </div>
     </nav>
     <!-- Mobile menu, show/hide based on menu open state. -->
-    <div class="lg:hidden fixed inset-0 z-50 hidden" role="dialog" aria-modal="true">
+    <div id="mobileMenu" class="lg:hidden fixed inset-0 z-50 hidden" role="dialog" aria-modal="true">
       <!-- Background backdrop, show/hide based on slide-over state. -->
       <div class="fixed inset-0 z-10"></div>
       <div
@@ -104,7 +106,7 @@
           </a>
           <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
             <span class="sr-only">Close menu</span>
-            <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            <svg id="mobileCloseButton" class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
               aria-hidden="true" data-slot="icon">
               <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
             </svg>
@@ -132,27 +134,21 @@
                 </button>
                 <!-- 'Product' sub-menu, show/hide based on menu state. -->
                 <div class="mt-2 space-y-2" id="disclosure-1">
-                  <a href="#"
+                  <a href="adminCreate.html"
                     class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Create
                     Organizer Account</a>
-                  <a href="#"
+                  <a href="adminLogin.html"
                     class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Create
                     & Manage Events</a>
-                  <a href="#"
-                    class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Help
-                    & Support</a>
                 </div>
-                <a href="#"
-                  class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Featured
-                  Event</a>
-                <a href="#"
+                <a href="index.html"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Event
                   Listing</a>
-                <a href="#"
+                <a href="faq.html"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">FAQ</a>
               </div>
               <div class="py-6">
-                <a href="#"
+                <a href="custLogin.html"
                   class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Log
                   in</a>
               </div>

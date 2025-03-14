@@ -158,39 +158,100 @@
       </div>
   </header>
 
-  <section class="bg-gray-50 dark:bg-gray-900 flex justify-center items-center h-screen w-full">
-    <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-        <div class="p-10w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
-            <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
-                <h1 class="pb-7 text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
-                    Login as Customer
-                </h1>
-                <div class="h-6"></div>
-                <form class="space-y-4 md:space-y-6" action="#">
-                    <div>
-                        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-                        <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" required="">
-                    </div>
-                    <div>
-                        <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
-                        <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
-                    </div>
-                    
-                    <div class="h-6"></div>
-                    <div class="flex space-x-2 flex-wrap justify-center items-baseline">
-                      <div class="h-12"></div>
-                      <button class="font-semibold rounded-lg px-4 py-2 bg-blue-700 text-white hover:bg-blue-700 duration-300">
-                        Sign Up
-                      </button>
-                    <button type="submit" class="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-1 pb text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Create an account</button>
-                    <p class="text-sm font-light text-gray-500 dark:text-gray-400">
-                        Do not have an account? <a href="custCreate.html" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Signup here</a>
-                    </p>
-                </form>
+  <section class="py-10 bg-gray-50 sm:py-16 lg:py-24">
+    <div class="h-9"></div>
+    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="max-w-2xl mx-auto text-center">
+            <h1 class="text-xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
+                Explore Common Questions
+            </h1>
+            <div class="h-8"></div>
+
+    <div class="h-9"></div>
+        </div>
+        <div class="max-w-3xl mx-auto mt-8 space-y-4 md:mt-16">
+            <div
+                class="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50">
+                <button type="button" id="question1" data-state="closed" class="flex items-center justify-between w-full px-4 py-5 sm:p-6">
+                    <span class="flex text-lg font-semibold text-black">Do I need to create an account to buy a ticket?</span>
+                    <svg id="arrow1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        class="w-6 h-6 text-gray-400">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div id="answer1" style="display:none" class="px-4 pb-5 sm:px-6 sm:pb-6">
+                    <p>Yes, you do require an account to buy and manage your tickets.</p>
+                </div>
+            </div>
+            <div
+                class="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50">
+                <button type="button" id="question2" data-state="closed" class="flex items-center justify-between w-full px-4 py-5 sm:p-6">
+                    <span class="flex text-lg font-semibold text-black">How do I buy a ticket?</span>
+                    <svg id="arrow2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        class="w-6 h-6 text-gray-400">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div id="answer2" style="display:none" class="px-4 pb-5 sm:px-6 sm:pb-6">
+                    <p>Simply select your desired ticket, press the “Buy Ticket”, and confirm your booking.</p>
+                </div>
+            </div>
+            <div
+                class="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50">
+                <button type="button" id="question3" data-state="closed" class="flex items-center justify-between w-full px-4 py-5 sm:p-6">
+                    <span class="flex text-lg font-semibold text-black">I encountered an error while booking a ticket. What should I do?</span>
+                    <svg id="arrow3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        class="w-6 h-6 text-gray-400">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div id="answer3" style="display:none" class="px-4 pb-5 sm:px-6 sm:pb-6">
+                    <p>Try refreshing the page or clearing your browser cache.</p>
+                </div>
+            </div>
+            <div
+                class="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50">
+                <button type="button" id="question4" data-state="closed" class="flex items-center justify-between w-full px-4 py-5 sm:p-6">
+                    <span class="flex text-lg font-semibold text-black">The website is not loading properly. What should I do?</span>
+                    <svg id="arrow4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        class="w-6 h-6 text-gray-400">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div id="answer4" style="display:none" class="px-4 pb-5 sm:px-6 sm:pb-6">
+                    <p>Make sure you are using an updated browser like Chrome, Firefox, or Edge.</p>
+                </div>
             </div>
         </div>
+        <div class="h-8"></div>
+
+      <div class="h-9"></div>
+      <div class="h-9"></div>
+        <p class="text-center text-gray-600 textbase mt-9">
+            Still have questions?
+            <span class="cursor-pointer font-medium text-tertiary transition-all duration-200 hover:text-tertiary focus:text-tertiary hover-underline">Contact
+                our support
+            </span>
+        </p>
     </div>
-  </section>
+    <script>
+        // JavaScript to toggle the answers and rotate the arrows
+        document.querySelectorAll('[id^="question"]').forEach(function(button, index) {
+            button.addEventListener('click', function() {
+                var answer = document.getElementById('answer' + (index + 1));
+                var arrow = document.getElementById('arrow' + (index + 1));
+
+                if (answer.style.display === 'none' || answer.style.display === '') {
+                    answer.style.display = 'block';
+                    arrow.style.transform = 'rotate(0deg)';
+                } else {
+                    answer.style.display = 'none';
+                    arrow.style.transform = 'rotate(-180deg)';
+                }
+            });
+        });
+    </script>
+</section>
 
   <div class="h-4"></div>
 
