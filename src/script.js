@@ -68,8 +68,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-<<<<<<< Updated upstream
-=======
 const iconCart = document.querySelector('.icon-cart');
 const closeCart = document.querySelector('.close');
 const body = document.querySelector('body');
@@ -98,7 +96,6 @@ closeCart.addEventListener('click', () => {
 })
 
 
->>>>>>> Stashed changes
 // Mobile dropdown
   // document.addEventListener("DOMContentLoaded", function () {
   //     // Select menu button and mobile menu container
