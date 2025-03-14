@@ -68,6 +68,33 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+const iconCart = document.querySelector('.icon-cart');
+const closeCart = document.querySelector('.close');
+const body = document.querySelector('body');
+const cartTab = document.querySelector('.cartTab');
+
+
+// iconCart.addEventListener('click', () => {
+//   body.classList.toggle('showCart');
+// })
+
+iconCart.addEventListener('click', () => {
+  body.classList.toggle('showCart');
+  document.querySelector('.container').classList.toggle('move-left');
+})
+
+
+
+iconCart.addEventListener('click', () => {
+  const isVisible = body.classList.contains('showCart');
+  console.log("is visible : " + isVisible);
+  cartTab.setAttribute('aria-hidden', !isVisible);
+})
+
+closeCart.addEventListener('click', () => {
+  body.classList.remove('showCart');
+})
+
 // Mobile dropdown
   // document.addEventListener("DOMContentLoaded", function () {
   //     // Select menu button and mobile menu container
