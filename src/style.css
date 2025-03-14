@@ -3226,6 +3226,11 @@
   right: -20px;
 }
 
+.icon-cart {
+  cursor: pointer; /* Ensure this is set to pointer */
+  pointer-events: auto;
+}
+
 /* .cartTab {
   width: 400px;
   background-color: #353432;
@@ -3239,6 +3244,27 @@
   transition: right .5s ease-in-out; 
   z-index: 999;
 } */
+
+#event-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#event-list .relative {
+  margin: 20px;
+}
+
+#event-list img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+.container.move-left {
+  transform: translateX(-300px);
+}
+
 
 .cartTab {
   width: 400px; /* Ensure this width matches the translation value */
