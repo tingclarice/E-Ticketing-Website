@@ -134,27 +134,21 @@
                 </button>
                 <!-- 'Product' sub-menu, show/hide based on menu state. -->
                 <div class="mt-2 space-y-2" id="disclosure-1">
-                  <a href="#"
+                  <a href="adminCreate.html"
                     class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Create
                     Organizer Account</a>
-                  <a href="#"
+                  <a href="adminLogin.html"
                     class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Create
                     & Manage Events</a>
-                  <a href="#"
-                    class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Help
-                    & Support</a>
                 </div>
-                <a href="#"
-                  class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Featured
-                  Event</a>
-                <a href="#"
+                <a href="index.html"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Event
                   Listing</a>
                 <a href="#"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">FAQ</a>
               </div>
               <div class="py-6">
-                <a href="#"
+                <a href="custLogin.html"
                   class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Log
                   in</a>
               </div>
@@ -216,6 +210,7 @@
 
   <div class="h-8"></div>
 
+  <!-- Search Button -->
   <form class="max-w-lg mx-auto m-100">
     <div class="flex">
       <label for="search-dropdown" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Your
@@ -305,9 +300,9 @@
 
   <div class="h-8"></div>
 
-  <div class="flex justify-center flex-wrap gap-x-8">
+  <div class="flex-container">
     <!-- Card 1 -->
-    <div class="relative flex flex-col ml-20 my-6 bg-white shadow-sm border border-gray-300 rounded-lg w-64 h-40">
+    <div class="card bg-white shadow-sm border border-gray-300 rounded-lg w-64 h-40">
       
       <!-- Content -->
         <div class="relative h-40 m-0.5 overflow-hidden text-white rounded-md">
@@ -326,7 +321,7 @@
           <p class="text-slate-600 leading-normal font-light">
             Price : $0.00
           </p>
-          <p class="pt-2 font-medium text-slate-600 leading-normal font-light">
+          <p class="pt-2 text-slate-600 leading-normal font-light">
             10 Seats Left! 
           </p>
         </div>
@@ -341,7 +336,7 @@
     </div>
   
     <!-- Card 2 -->
-    <div class="relative flex flex-col ml-20 my-6 bg-white shadow-sm border border-gray-300 rounded-lg w-64 h-40">
+    <div class="card bg-white shadow-sm border border-gray-300 rounded-lg w-64 h-40">
       
       <!-- Content -->
         <div class="relative h-40 m-0.5 overflow-hidden text-white rounded-md">
@@ -360,7 +355,7 @@
           <p class="text-slate-600 leading-normal font-light">
             Price : $0.00
           </p>
-          <p class="pt-2 font-medium text-slate-600 leading-normal font-light">
+          <p class="pt-2 text-slate-600 leading-normal font-light">
             10 Seats Left! 
           </p>
         </div>
@@ -375,7 +370,7 @@
     </div>
 
     <!-- Card 3 -->
-    <div class="relative flex flex-col ml-20 my-6 bg-white shadow-sm border border-gray-300 rounded-lg w-64 h-40">
+    <div class="card bg-white shadow-sm border border-gray-300 rounded-lg w-64 h-40">
       
       <!-- Content -->
         <div class="relative h-40 m-0.5 overflow-hidden text-white rounded-md">
@@ -394,7 +389,7 @@
           <p class="text-slate-600 leading-normal font-light">
             Price : $0.00
           </p>
-          <p class="pt-2 font-medium text-slate-600 leading-normal font-light">
+          <p class="pt-2 text-slate-600 leading-normal font-light">
             10 Seats Left! 
           </p>
         </div>
@@ -407,115 +402,183 @@
       </div>
     
     </div>
+
+    <!-- Card 4 -->
+    <div class="card bg-white shadow-sm border border-gray-300 rounded-lg w-64 h-40">
+      
+      <!-- Content -->
+        <div class="relative h-40 m-0.5 overflow-hidden text-white rounded-md">
+          <img src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="card-image" />
+        </div>
+        <div class="p-4 pb-0.5">
+          <h6 class="mb-2 text-slate-800 text-xl font-semibold">
+            Event Name
+          </h6>
+          <p class="text-slate-600 leading-normal font-light">
+            Date : 00/00/000
+          </p>
+          <p class="text-slate-600 leading-normal font-light">
+            Time : 00:00
+          </p>
+          <p class="text-slate-600 leading-normal font-light">
+            Price : $0.00
+          </p>
+          <p class="pt-2 text-slate-600 leading-normal font-light">
+            10 Seats Left! 
+          </p>
+        </div>
+        <div class="flex space-x-2 space-y-2 flex-wrap justify-center items-baseline">
+          <button class="font-semibold rounded-lg px-4 py-2 bg-blue-700 text-white hover:bg-blue-700 duration-300">
+            Buy Ticket
+          </button>
+        <div class="h-10/12"></div>
+        
+      </div>
+    
+    </div>
+  
+
+  <!-- Card 5 -->
+  <div class="card bg-white shadow-sm border border-gray-300 rounded-lg w-64 h-40">
+      
+    <!-- Content -->
+      <div class="relative h-40 m-0.5 overflow-hidden text-white rounded-md">
+        <img src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="card-image" />
+      </div>
+      <div class="p-4 pb-0.5">
+        <h6 class="mb-2 text-slate-800 text-xl font-semibold">
+          Event Name
+        </h6>
+        <p class="text-slate-600 leading-normal font-light">
+          Date : 00/00/000
+        </p>
+        <p class="text-slate-600 leading-normal font-light">
+          Time : 00:00
+        </p>
+        <p class="text-slate-600 leading-normal font-light">
+          Price : $0.00
+        </p>
+        <p class="pt-2 text-slate-600 leading-normal font-light">
+          10 Seats Left! 
+        </p>
+      </div>
+      <div class="flex space-x-2 space-y-2 flex-wrap justify-center items-baseline">
+        <button class="font-semibold rounded-lg px-4 py-2 bg-blue-700 text-white hover:bg-blue-700 duration-300">
+          Buy Ticket
+        </button>
+      <div class="h-10/12"></div>
+      
+    </div>
+  
   </div>
+
+  <!-- Card 6 -->
+  <div class="card bg-white shadow-sm border border-gray-300 rounded-lg w-64 h-40">
+      
+    <!-- Content -->
+      <div class="relative h-40 m-0.5 overflow-hidden text-white rounded-md">
+        <img src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="card-image" />
+      </div>
+      <div class="p-4 pb-0.5">
+        <h6 class="mb-2 text-slate-800 text-xl font-semibold">
+          Event Name
+        </h6>
+        <p class="text-slate-600 leading-normal font-light">
+          Date : 00/00/000
+        </p>
+        <p class="text-slate-600 leading-normal font-light">
+          Time : 00:00
+        </p>
+        <p class="text-slate-600 leading-normal font-light">
+          Price : $0.00
+        </p>
+        <p class="pt-2 text-slate-600 leading-normal font-light">
+          10 Seats Left! 
+        </p>
+      </div>
+      <div class="flex space-x-2 space-y-2 flex-wrap justify-center items-baseline">
+        <button class="font-semibold rounded-lg px-4 py-2 bg-blue-700 text-white hover:bg-blue-700 duration-300">
+          Buy Ticket
+        </button>
+      <div class="h-10/12"></div>
+      
+    </div>
+  
+  </div>
+
+  <!-- Card 7 -->
+  <div class="card bg-white shadow-sm border border-gray-300 rounded-lg w-64 h-40">
+        
+    <!-- Content -->
+      <div class="relative h-40 m-0.5 overflow-hidden text-white rounded-md">
+        <img src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="card-image" />
+      </div>
+      <div class="p-4 pb-0.5">
+        <h6 class="mb-2 text-slate-800 text-xl font-semibold">
+          Event Name
+        </h6>
+        <p class="text-slate-600 leading-normal font-light">
+          Date : 00/00/000
+        </p>
+        <p class="text-slate-600 leading-normal font-light">
+          Time : 00:00
+        </p>
+        <p class="text-slate-600 leading-normal font-light">
+          Price : $0.00
+        </p>
+        <p class="pt-2 text-slate-600 leading-normal font-light">
+          10 Seats Left! 
+        </p>
+      </div>
+      <div class="flex space-x-2 space-y-2 flex-wrap justify-center items-baseline">
+        <button class="font-semibold rounded-lg px-4 py-2 bg-blue-700 text-white hover:bg-blue-700 duration-300">
+          Buy Ticket
+        </button>
+      <div class="h-10/12"></div>
+      
+    </div>
+
+  </div>
+
+  <!-- Card 8 -->
+  <div class="card bg-white shadow-sm border border-gray-300 rounded-lg w-64 h-40">
+      
+    <!-- Content -->
+      <div class="relative h-40 m-0.5 overflow-hidden text-white rounded-md">
+        <img src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="card-image" />
+      </div>
+      <div class="p-4 pb-0.5">
+        <h6 class="mb-2 text-slate-800 text-xl font-semibold">
+          Event Name
+        </h6>
+        <p class="text-slate-600 leading-normal font-light">
+          Date : 00/00/000
+        </p>
+        <p class="text-slate-600 leading-normal font-light">
+          Time : 00:00
+        </p>
+        <p class="text-slate-600 leading-normal font-light">
+          Price : $0.00
+        </p>
+        <p class="pt-2 text-slate-600 leading-normal font-light">
+          10 Seats Left! 
+        </p>
+      </div>
+      <div class="flex space-x-2 space-y-2 flex-wrap justify-center items-baseline">
+        <button class="font-semibold rounded-lg px-4 py-2 bg-blue-700 text-white hover:bg-blue-700 duration-300">
+          Buy Ticket
+        </button>
+      <div class="h-10/12"></div>
+      
+    </div>
+  
+  </div>
+</div>
 
   <div class="h-8"></div>
 
-  <div class="flex justify-center flex-wrap gap-x-8">
-    <!-- Card 1 -->
-    <div class="relative flex flex-col ml-20 my-6 bg-white shadow-sm border border-gray-300 rounded-lg w-64 h-40">
-      
-      <!-- Content -->
-        <div class="relative h-40 m-0.5 overflow-hidden text-white rounded-md">
-          <img src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="card-image" />
-        </div>
-        <div class="p-4 pb-0.5">
-          <h6 class="mb-2 text-slate-800 text-xl font-semibold">
-            Event Name
-          </h6>
-          <p class="text-slate-600 leading-normal font-light">
-            Date : 00/00/000
-          </p>
-          <p class="text-slate-600 leading-normal font-light">
-            Time : 00:00
-          </p>
-          <p class="text-slate-600 leading-normal font-light">
-            Price : $0.00
-          </p>
-          <p class="pt-2 font-medium text-slate-600 leading-normal font-light">
-            10 Seats Left! 
-          </p>
-        </div>
-        <div class="flex space-x-2 space-y-2 flex-wrap justify-center items-baseline">
-          <button class="font-semibold rounded-lg px-4 py-2 bg-blue-700 text-white hover:bg-blue-700 duration-300">
-            Buy Ticket
-          </button>
-        <div class="h-10/12"></div>
-        
-      </div>
-    
-    </div>
-  
-    <!-- Card 2 -->
-    <div class="relative flex flex-col ml-20 my-6 bg-white shadow-sm border border-gray-300 rounded-lg w-64 h-40">
-      
-      <!-- Content -->
-        <div class="relative h-40 m-0.5 overflow-hidden text-white rounded-md">
-          <img src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="card-image" />
-        </div>
-        <div class="p-4 pb-0.5">
-          <h6 class="mb-2 text-slate-800 text-xl font-semibold">
-            Event Name
-          </h6>
-          <p class="text-slate-600 leading-normal font-light">
-            Date : 00/00/000
-          </p>
-          <p class="text-slate-600 leading-normal font-light">
-            Time : 00:00
-          </p>
-          <p class="text-slate-600 leading-normal font-light">
-            Price : $0.00
-          </p>
-          <p class="pt-2 font-medium text-slate-600 leading-normal font-light">
-            10 Seats Left! 
-          </p>
-        </div>
-        <div class="flex space-x-2 space-y-2 flex-wrap justify-center items-baseline">
-          <button class="font-semibold rounded-lg px-4 py-2 bg-blue-700 text-white hover:bg-blue-700 duration-300">
-            Buy Ticket
-          </button>
-        <div class="h-10/12"></div>
-        
-      </div>
-    
-    </div>
-
-    <!-- Card 3 -->
-    <div class="relative flex flex-col ml-20 my-6 bg-white shadow-sm border border-gray-300 rounded-lg w-64 h-40">
-      
-      <!-- Content -->
-        <div class="relative h-40 m-0.5 overflow-hidden text-white rounded-md">
-          <img src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="card-image" />
-        </div>
-        <div class="p-4 pb-0.5">
-          <h6 class="mb-2 text-slate-800 text-xl font-semibold">
-            Event Name
-          </h6>
-          <p class="text-slate-600 leading-normal font-light">
-            Date : 00/00/000
-          </p>
-          <p class="text-slate-600 leading-normal font-light">
-            Time : 00:00
-          </p>
-          <p class="text-slate-600 leading-normal font-light">
-            Price : $0.00
-          </p>
-          <p class="pt-2 font-medium text-slate-600 leading-normal font-light">
-            10 Seats Left! 
-          </p>
-        </div>
-        <div class="flex space-x-2 space-y-2 flex-wrap justify-center items-baseline">
-          <button class="font-semibold rounded-lg px-4 py-2 bg-blue-700 text-white hover:bg-blue-700 duration-300">
-            Buy Ticket
-          </button>
-        <div class="h-10/12"></div>
-        
-      </div>
-    
-    </div>
-  </div>
-
   <div class="h-9"></div>
+
 
   
   <div class = "w-full flex justify-center flex-wrap ">
